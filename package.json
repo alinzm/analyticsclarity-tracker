@@ -1,0 +1,19 @@
+{
+  "name": "@analyticsclarity/tracker",
+  "version": "0.1.0",
+  "description": "The transparent, privacy-first browser tracker used by AnalyticsClarity.",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "build:strict": "STRICT_DSGVO=1 rollup -c",
+    "verify:strict": "STRICT_DSGVO=1 rollup -c && node scripts/verify-strict-build.mjs",
+    "test": "pnpm verify:strict"
+  },
+  "devDependencies": {
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.52.4"
+  }
+}
